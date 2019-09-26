@@ -5,5 +5,5 @@ The existing approaches for salient motion segmentation are unable to explicitly
 ![alt text](https://github.com/mfaisal59/EpONet/blob/master/images/flowDiagram.png)
 
 # Instructions
-## Epipolar Score Computation
+### Epipolar Score Computation
 The epipolar score computation code can be downloaded from [link](https://github.com/mfaisal59/EpipolarScore)
