@@ -23,47 +23,47 @@ You will aslo need to have a relatively recently version of MATLAB, for computat
 ### Instructions:
 
 
-	i. Epipolar Score Computation
-	
-	The epipolar score computation code and instructions can be downloaded from [link](https://github.com/mfaisal59/EpipolarScore). 
+i. Epipolar Score Computation
 
-	ii. Clone the repository
-		
-	```
-	git clone https://github.com/mfaisal59/EpONet.git
-	```
-	
-	iii. Download Trained Models:
-	
-	```
-	cd EpONet/
-	bash ./models/download_models.sh
-	#These command will populate the `./models/` folder with trained models.
-	```
+The epipolar score computation code and instructions can be downloaded from [link](https://github.com/mfaisal59/EpipolarScore). 
 
-	iv. Download our pre-computed Epipolar Score, Optical Flow, motion Images and JPEGImages for two test sequences from DAVIS Dataset.
+ii. Clone the repository
 	
-	```
-	cd EpONet/
-	bash ./DAVIS_Dataset/download_data.sh
-	#These command will populate the `./DAVIS_Dataset/` folder.
-	```
-	
-	v. Test EpO (Motion Network)
-	
-	```
-	th testDAVIS_motion.lua -gpu $GPU_ID -model $MODEL_NAME
-	#modify the path in testDAVIS_motion.lua & segmentDAVIS_motion.lua script.
-	#where GPU_ID stands for the index of GPU, and MODEL_NAME is motion model i.e. DAVISFineTuned.dat
-	```
+```
+git clone https://github.com/mfaisal59/EpONet.git
+```
 
-	vi. Test EpO+ (Fusion Network)
-	
-	```
-	th testDAVIS_Fusion.lua -gpu $GPU_ID -model -memoryModel $MODEL_NAME -motionModel DAVISFineTuned.dat
-	#modify the path in testDAVIS_Fusion.lua & segmentFrame_Fusion.lua script.
-	#where GPU_ID stands for the index of GPU, and MODEL_NAME is fusion model i.e. fusionBestNet_DAVIS_2016.dat
-	```
+iii. Download Trained Models:
+
+```
+cd EpONet/
+bash ./models/download_models.sh
+#These command will populate the `./models/` folder with trained models.
+```
+
+iv. Download our pre-computed Epipolar Score, Optical Flow, motion Images and JPEGImages for two test sequences from DAVIS Dataset.
+
+```
+cd EpONet/
+bash ./DAVIS_Dataset/download_data.sh
+#These command will populate the `./DAVIS_Dataset/` folder.
+```
+
+v. Test EpO (Motion Network)
+
+```
+th testDAVIS_motion.lua -gpu $GPU_ID -model $MODEL_NAME
+#modify the path in testDAVIS_motion.lua & segmentDAVIS_motion.lua script.
+#where GPU_ID stands for the index of GPU, and MODEL_NAME is motion model i.e. DAVISFineTuned.dat
+```
+
+vi. Test EpO+ (Fusion Network)
+
+```
+th testDAVIS_Fusion.lua -gpu $GPU_ID -model -memoryModel $MODEL_NAME -motionModel DAVISFineTuned.dat
+#modify the path in testDAVIS_Fusion.lua & segmentFrame_Fusion.lua script.
+#where GPU_ID stands for the index of GPU, and MODEL_NAME is fusion model i.e. fusionBestNet_DAVIS_2016.dat
+```
 		
 ### Pre-Computed Results
 [EpO] (https://drive.google.com/drive/folders/1A2ewOKvLwZy0A83AZEC9XivZPNxm0PJB?usp=sharing)
