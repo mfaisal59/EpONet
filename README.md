@@ -32,31 +32,36 @@ You will aslo need to have a relatively recently version of MATLAB, for computat
 	```
 	
 	iii- Download Trained Models:
-		```Shell
-		cd EpONet/
-		bash ./models/download_models.sh
-		#These command will populate the `./models/` folder with trained models.
-		```
+	
+	```
+	cd EpONet/
+	bash ./models/download_models.sh
+	#These command will populate the `./models/` folder with trained models.
+	```
 
 	iv- Download our pre-computed Epipolar Score, Optical Flow, motion Images and JPEGImages for two test sequences from DAVIS Dataset.
-		```Shell
-		cd EpONet/
-		bash ./DAVIS_Dataset/download_data.sh
-		#These command will populate the `./DAVIS_Dataset/` folder.
-		```
+	
+	```
+	cd EpONet/
+	bash ./DAVIS_Dataset/download_data.sh
+	#These command will populate the `./DAVIS_Dataset/` folder.
+	```
+	
 	v- Test EpO (Motion Network)
-		```Shell
-		th testDAVIS_motion.lua -gpu $GPU_ID -model $MODEL_NAME
-		#modify the path in testDAVIS_motion.lua & segmentDAVIS_motion.lua script.
-		#where GPU_ID stands for the index of GPU, and MODEL_NAME is motion model i.e. DAVISFineTuned.dat
-		```
+	
+	```
+	th testDAVIS_motion.lua -gpu $GPU_ID -model $MODEL_NAME
+	#modify the path in testDAVIS_motion.lua & segmentDAVIS_motion.lua script.
+	#where GPU_ID stands for the index of GPU, and MODEL_NAME is motion model i.e. DAVISFineTuned.dat
+	```
 
 	v- Test EpO (Motion Network)
-		```Shell
-		th testDAVIS_Fusion.lua -gpu $GPU_ID -model -memoryModel $MODEL_NAME -motionModel DAVISFineTuned.dat
-		#modify the path in testDAVIS_Fusion.lua & segmentFrame_Fusion.lua script.
-		#where GPU_ID stands for the index of GPU, and MODEL_NAME is fusion model i.e. fusionBestNet_DAVIS_2016.dat
-		```
+	
+	```
+	th testDAVIS_Fusion.lua -gpu $GPU_ID -model -memoryModel $MODEL_NAME -motionModel DAVISFineTuned.dat
+	#modify the path in testDAVIS_Fusion.lua & segmentFrame_Fusion.lua script.
+	#where GPU_ID stands for the index of GPU, and MODEL_NAME is fusion model i.e. fusionBestNet_DAVIS_2016.dat
+	```
 		
 ##### Pre-Computed Results
 [EpO] (https://drive.google.com/drive/folders/1A2ewOKvLwZy0A83AZEC9XivZPNxm0PJB?usp=sharing)
