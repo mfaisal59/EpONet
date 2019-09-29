@@ -4,18 +4,59 @@ The existing approaches for salient motion segmentation are unable to explicitly
 
 ![alt text](https://github.com/mfaisal59/EpONet/blob/master/images/flowDiagram.png)
 
-# Instructions
-### Epipolar Score Computation
-The epipolar score computation code can be downloaded from [link](https://github.com/mfaisal59/EpipolarScore). 
+The is a public implementation of our WACV 2020 paper on Exploiting Geometric Constraints on Dense Trajectories for Motion Saliency. This repository contains testing code trained models.
 
-[EpO] (https://drive.google.com/file/d/1LxIyiHPoR5gIjs4bsZMtktsfPqJ1CZ8B/view?usp=sharing)
-[EpO+ Trained Network] (https://drive.google.com/file/d/1tBfS5JTrx5bqaQaF5kwxhTg1Zc1_E2iR/view?usp=sharing)
-[DeepLab] (https://drive.google.com/file/d/18u8lIiO4i1QD65XNvZI-mxjUrrRbwPrs/view?usp=sharing)
+1- Installations
 
+Our implementation is based on the Torch framework (http://torch.ch). It depends on the lua/torch packages "nnx", "rnn" and "extracunn". The first can be installed with
+
+	luarocks install nnx 
+
+The other two are installed with 
+	
+	git clone https://github.com/Element-Research/rnn; cd rnn; luarocks make rocks/rnn-scm-1.rockspec
+	git clone https://github.com/viorik/extracunn.git; cd extracunn; luarocks make 
+
+You will aslo need to have a relatively recently version of MATLAB, for computation of Optical Flow and Epipolar Score. 
+
+2- Instructions
+	i- Epipolar Score Computation
+	
+	The epipolar score computation code and instructions can be downloaded from [link](https://github.com/mfaisal59/EpipolarScore). 
+
+	ii- Clone the repository
+		```Shell
+		git clone https://github.com/mfaisal59/EpONet.git
+		```
+	
+	iii- Download Trained Models:
+		```Shell
+		cd EpONet/
+		bash ./models/download_models.sh
+		#These command will populate the `./models/` folder with trained models.
+		```
+
+	iv- Download our pre-computed Epipolar Score, Optical Flow, motion Images and JPEGImages for two test sequences from DAVIS Dataset.
+		```Shell
+		cd EpONet/
+		bash ./DAVIS_Dataset/download_data.sh
+		#These command will populate the `./DAVIS_Dataset/` folder.
+		```
+	v- Test EpO (Motion Network)
+		```Shell
+		th testDAVIS_motion.lua -gpu $GPU_ID -model $MODEL_NAME
+		#modify the path in testDAVIS_motion.lua & segmentDAVIS_motion.lua script.
+		#where GPU_ID stands for the index of GPU, and MODEL_NAME is motion model i.e. DAVISFineTuned.dat
+		```
+
+	v- Test EpO (Motion Network)
+		```Shell
+		th testDAVIS_Fusion.lua -gpu $GPU_ID -model -memoryModel $MODEL_NAME -motionModel DAVISFineTuned.dat
+		#modify the path in testDAVIS_Fusion.lua & segmentFrame_Fusion.lua script.
+		#where GPU_ID stands for the index of GPU, and MODEL_NAME is fusion model i.e. fusionBestNet_DAVIS_2016.dat
+		```
+		
 ##### Pre-Computed Results
 [EpO] (https://drive.google.com/drive/folders/1A2ewOKvLwZy0A83AZEC9XivZPNxm0PJB?usp=sharing)
-[Epo+] (https://drive.google.com/drive/folders/1gvMmAarNLfru7IVYkzfXuekhCMjcjYnO?usp=sharing)
 
-[pre-Computed Epipolar Score] (https://drive.google.com/drive/folders/1gvMmAarNLfru7IVYkzfXuekhCMjcjYnO?usp=sharing)
-[pre-Computed Optical Flow] (https://drive.google.com/drive/folders/1gvMmAarNLfru7IVYkzfXuekhCMjcjYnO?usp=sharing)
-[pre-Computed Motion Images] (https://drive.google.com/drive/folders/1gvMmAarNLfru7IVYkzfXuekhCMjcjYnO?usp=sharing)
+[Epo+] (https://drive.google.com/drive/folders/1gvMmAarNLfru7IVYkzfXuekhCMjcjYnO?usp=sharing)
