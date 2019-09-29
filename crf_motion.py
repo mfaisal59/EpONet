@@ -9,7 +9,7 @@ from pydensecrf.utils import unary_from_labels, create_pairwise_bilateral, creat
 from os import listdir, makedirs
 from os.path import isfile, join
 
-davis_path = '/home/cvlab/FAISAL/DAVIS_Dataset/DAVIS-trainval-480p'
+davis_path = './DAVIS_Dataset'
 setting = sys.argv[1]
 out_folder = sys.argv[2]
 for d in listdir(davis_path + '/Results/' + setting):
