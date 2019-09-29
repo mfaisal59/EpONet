@@ -6,7 +6,7 @@ The existing approaches for salient motion segmentation are unable to explicitly
 
 The is a public implementation of our WACV 2020 paper on Exploiting Geometric Constraints on Dense Trajectories for Motion Saliency. This repository contains testing code and trained models.
 
-### Installations:
+1. Installations:
 
 Our implementation is based on the Torch framework (http://torch.ch). It depends on the lua/torch packages "nnx", "rnn" and "extracunn". The first can be installed with
 
@@ -20,7 +20,7 @@ The other two are installed with
 You will aslo need to have a relatively recently version of MATLAB, for computation of Optical Flow and Epipolar Score. 
 
 
-### Instructions:
+2. Instructions:
 
 
 i. Epipolar Score Computation
