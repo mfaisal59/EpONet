@@ -4,7 +4,7 @@ The existing approaches for salient motion segmentation are unable to explicitly
 
 ![alt text](https://github.com/mfaisal59/EpONet/blob/master/images/flowDiagram.png)
 
-This is a public implementation of our WACV 2020 paper on Exploiting Geometric Constraints on Dense Trajectories for Motion Saliency. This repository contains testing code and trained models.
+This is a public implementation of our WACV 2020 paper on Exploiting Geometric Constraints on Dense Trajectories for Motion Saliency. This repository contains testing code and trained models. The complete source code is tested on Ubuntu 16.04 with CUDA 8.0 and MATLAB 2016b.
 
 ### Installations:
 
@@ -25,7 +25,7 @@ You will aslo need to have a relatively recently version of MATLAB, for computat
 
 ###### 1) Epipolar Score Computation
 
-The epipolar score computation code and instructions can be downloaded from this [EpipolarScore](https://github.com/mfaisal59/EpipolarScore). 
+The epipolar score computation code and instructions can be downloaded from [EpipolarScore](https://github.com/mfaisal59/EpipolarScore). 
 
 ###### 2) Clone the repository
 	
