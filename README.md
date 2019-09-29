@@ -20,20 +20,20 @@ The other two are installed with
 You will aslo need to have a relatively recently version of MATLAB, for computation of Optical Flow and Epipolar Score. 
 
 
-2. Instructions:
+###. Instructions:
 
 
-i. Epipolar Score Computation
+###### 1) Epipolar Score Computation
 
 The epipolar score computation code and instructions can be downloaded from [link](https://github.com/mfaisal59/EpipolarScore). 
 
-ii. Clone the repository
+###### 2) Clone the repository
 	
 ```
 git clone https://github.com/mfaisal59/EpONet.git
 ```
 
-iii. Download Trained Models:
+###### 3) Download Trained Models:
 
 ```
 cd EpONet/
@@ -41,7 +41,7 @@ bash ./models/download_models.sh
 #These command will populate the `./models/` folder with trained models.
 ```
 
-iv. Download our pre-computed Epipolar Score, Optical Flow, motion Images and JPEGImages for two test sequences from DAVIS Dataset.
+###### 4) Download our pre-computed Epipolar Score, Optical Flow, motion Images and JPEGImages for two test sequences from DAVIS Dataset.
 
 ```
 cd EpONet/
@@ -49,7 +49,7 @@ bash ./DAVIS_Dataset/download_data.sh
 #These command will populate the `./DAVIS_Dataset/` folder.
 ```
 
-v. Test EpO (Motion Network)
+###### 5) Test EpO (Motion Network)
 
 ```
 th testDAVIS_motion.lua -gpu $GPU_ID -model $MODEL_NAME
@@ -57,7 +57,7 @@ th testDAVIS_motion.lua -gpu $GPU_ID -model $MODEL_NAME
 #where GPU_ID stands for the index of GPU, and MODEL_NAME is motion model i.e. DAVISFineTuned.dat
 ```
 
-vi. Test EpO+ (Fusion Network)
+###### 6) Test EpO+ (Fusion Network)
 
 ```
 th testDAVIS_Fusion.lua -gpu $GPU_ID -model -memoryModel $MODEL_NAME -motionModel DAVISFineTuned.dat
