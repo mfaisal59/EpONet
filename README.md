@@ -6,4 +6,16 @@ The existing approaches for salient motion segmentation are unable to explicitly
 
 # Instructions
 ### Epipolar Score Computation
-The epipolar score computation code can be downloaded from [link](https://github.com/mfaisal59/EpipolarScore)
+The epipolar score computation code can be downloaded from [link](https://github.com/mfaisal59/EpipolarScore). 
+
+[EpO] (https://drive.google.com/file/d/1LxIyiHPoR5gIjs4bsZMtktsfPqJ1CZ8B/view?usp=sharing)
+[EpO+ Trained Network] (https://drive.google.com/file/d/1tBfS5JTrx5bqaQaF5kwxhTg1Zc1_E2iR/view?usp=sharing)
+[DeepLab] (https://drive.google.com/file/d/18u8lIiO4i1QD65XNvZI-mxjUrrRbwPrs/view?usp=sharing)
+
+#####Pre-Computed Results
+[EpO] (https://drive.google.com/drive/folders/1A2ewOKvLwZy0A83AZEC9XivZPNxm0PJB?usp=sharing)
+[Epo+] (https://drive.google.com/drive/folders/1gvMmAarNLfru7IVYkzfXuekhCMjcjYnO?usp=sharing)
+
+[pre-Computed Epipolar Score] (https://drive.google.com/drive/folders/1gvMmAarNLfru7IVYkzfXuekhCMjcjYnO?usp=sharing)
+[pre-Computed Optical Flow] (https://drive.google.com/drive/folders/1gvMmAarNLfru7IVYkzfXuekhCMjcjYnO?usp=sharing)
+[pre-Computed Motion Images]
