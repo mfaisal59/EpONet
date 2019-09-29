@@ -4,7 +4,7 @@ The existing approaches for salient motion segmentation are unable to explicitly
 
 ![alt text](https://github.com/mfaisal59/EpONet/blob/master/images/flowDiagram.png)
 
-The is a public implementation of our WACV 2020 paper on Exploiting Geometric Constraints on Dense Trajectories for Motion Saliency. This repository contains testing code and trained models.
+This is a public implementation of our WACV 2020 paper on Exploiting Geometric Constraints on Dense Trajectories for Motion Saliency. This repository contains testing code and trained models.
 
 ### Installations:
 
@@ -25,7 +25,7 @@ You will aslo need to have a relatively recently version of MATLAB, for computat
 
 ###### 1) Epipolar Score Computation
 
-The epipolar score computation code and instructions can be downloaded from [link](https://github.com/mfaisal59/EpipolarScore). 
+The epipolar score computation code and instructions can be downloaded from this [EpipolarScore](https://github.com/mfaisal59/EpipolarScore). 
 
 ###### 2) Clone the repository
 	
@@ -64,8 +64,16 @@ th testDAVIS_Fusion.lua -gpu $GPU_ID -model -memoryModel $MODEL_NAME -motionMode
 #modify the path in testDAVIS_Fusion.lua & segmentFrame_Fusion.lua script.
 #where GPU_ID stands for the index of GPU, and MODEL_NAME is fusion model i.e. fusionBestNet_DAVIS_2016.dat
 ```
+
+###### 7) Apply CRF 
+
+To run the CRF post processing step, change the path to DAVIS dataset in the 'crf_motion.py' & 'crf_fusion.py' scripts run the following commands:
+
+```
+python crf_motion.py $RESULT_FOLDER $RESULT_FOLDER_CRF
+python crf_fusion.py $RESULT_FOLDER $RESULT_FOLDER_CRF
+#where RESULT_FOLDER stands for the name of the folder containing the segmentation produced by the model and RESULT_FOLDER_CRF is the name of the folder in which the post processed segmentations will be saved.
+```
 		
 ### Pre-Computed Results
-[EpO] (https://drive.google.com/drive/folders/1A2ewOKvLwZy0A83AZEC9XivZPNxm0PJB?usp=sharing)
-
-[Epo+] (https://drive.google.com/drive/folders/1gvMmAarNLfru7IVYkzfXuekhCMjcjYnO?usp=sharing)
+Pre-Computed results on validation set of DAVIS Dataset can be downloaded from these links [EpO] (https://drive.google.com/drive/folders/1A2ewOKvLwZy0A83AZEC9XivZPNxm0PJB?usp=sharing) [Epo+] (https://drive.google.com/drive/folders/1gvMmAarNLfru7IVYkzfXuekhCMjcjYnO?usp=sharing)
