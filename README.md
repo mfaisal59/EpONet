@@ -76,4 +76,4 @@ python crf_fusion.py $RESULT_FOLDER $RESULT_FOLDER_CRF
 ```
 		
 ### Pre-Computed Results
-Pre-Computed results on validation set of DAVIS Dataset can be downloaded from these links [EpO](https://drive.google.com/drive/folders/1A2ewOKvLwZy0A83AZEC9XivZPNxm0PJB?usp=sharing) [Epo+](https://drive.google.com/drive/folders/1gvMmAarNLfru7IVYkzfXuekhCMjcjYnO?usp=sharing).
+Pre-Computed results on validation set of DAVIS Dataset can be downloaded from these links [EpO](https://drive.google.com/drive/folders/1A2ewOKvLwZy0A83AZEC9XivZPNxm0PJB?usp=sharing) and [Epo+](https://drive.google.com/drive/folders/1gvMmAarNLfru7IVYkzfXuekhCMjcjYnO?usp=sharing).
