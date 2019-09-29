@@ -6,7 +6,7 @@ The existing approaches for salient motion segmentation are unable to explicitly
 
 The is a public implementation of our WACV 2020 paper on Exploiting Geometric Constraints on Dense Trajectories for Motion Saliency. This repository contains testing code and trained models.
 
-1. Installations:
+### Installations:
 
 Our implementation is based on the Torch framework (http://torch.ch). It depends on the lua/torch packages "nnx", "rnn" and "extracunn". The first can be installed with
 
@@ -19,19 +19,19 @@ The other two are installed with
 
 You will aslo need to have a relatively recently version of MATLAB, for computation of Optical Flow and Epipolar Score. 
 
-2. Instructions:
+### Instructions:
 
-	i- Epipolar Score Computation
+	1. Epipolar Score Computation
 	
 	The epipolar score computation code and instructions can be downloaded from [link](https://github.com/mfaisal59/EpipolarScore). 
 
-	ii- Clone the repository
+	2. Clone the repository
 		
 	```
 	git clone https://github.com/mfaisal59/EpONet.git
 	```
 	
-	iii- Download Trained Models:
+	3. Download Trained Models:
 	
 	```
 	cd EpONet/
@@ -39,7 +39,7 @@ You will aslo need to have a relatively recently version of MATLAB, for computat
 	#These command will populate the `./models/` folder with trained models.
 	```
 
-	iv- Download our pre-computed Epipolar Score, Optical Flow, motion Images and JPEGImages for two test sequences from DAVIS Dataset.
+	4. Download our pre-computed Epipolar Score, Optical Flow, motion Images and JPEGImages for two test sequences from DAVIS Dataset.
 	
 	```
 	cd EpONet/
@@ -47,7 +47,7 @@ You will aslo need to have a relatively recently version of MATLAB, for computat
 	#These command will populate the `./DAVIS_Dataset/` folder.
 	```
 	
-	v- Test EpO (Motion Network)
+	5. Test EpO (Motion Network)
 	
 	```
 	th testDAVIS_motion.lua -gpu $GPU_ID -model $MODEL_NAME
@@ -55,7 +55,7 @@ You will aslo need to have a relatively recently version of MATLAB, for computat
 	#where GPU_ID stands for the index of GPU, and MODEL_NAME is motion model i.e. DAVISFineTuned.dat
 	```
 
-	v- Test EpO (Motion Network)
+	6. Test EpO+ (Fusion Network)
 	
 	```
 	th testDAVIS_Fusion.lua -gpu $GPU_ID -model -memoryModel $MODEL_NAME -motionModel DAVISFineTuned.dat
@@ -63,7 +63,7 @@ You will aslo need to have a relatively recently version of MATLAB, for computat
 	#where GPU_ID stands for the index of GPU, and MODEL_NAME is fusion model i.e. fusionBestNet_DAVIS_2016.dat
 	```
 		
-##### Pre-Computed Results
+### Pre-Computed Results
 [EpO] (https://drive.google.com/drive/folders/1A2ewOKvLwZy0A83AZEC9XivZPNxm0PJB?usp=sharing)
 
 [Epo+] (https://drive.google.com/drive/folders/1gvMmAarNLfru7IVYkzfXuekhCMjcjYnO?usp=sharing)
