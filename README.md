@@ -23,17 +23,17 @@ You will aslo need to have a relatively recently version of MATLAB, for computat
 ### Instructions:
 
 
-###### 1) Epipolar Score Computation
+##### 1) Epipolar Score Computation
 
 The epipolar score computation code and instructions can be downloaded from [EpipolarScore](https://github.com/mfaisal59/EpipolarScore). 
 
-###### 2) Clone the repository
+##### 2) Clone the repository
 	
 ```
 git clone https://github.com/mfaisal59/EpONet.git
 ```
 
-###### 3) Download Trained Models:
+##### 3) Download Trained Models:
 
 ```
 cd EpONet/
@@ -41,7 +41,7 @@ bash ./models/download_models.sh
 #These command will populate the `./models/` folder with trained models.
 ```
 
-###### 4) Download our pre-computed Epipolar Score, Optical Flow, motion Images and JPEGImages for two test sequences from DAVIS Dataset.
+##### 4) Download our pre-computed Epipolar Score, Optical Flow, motion Images and JPEGImages for two test sequences from DAVIS Dataset.
 
 ```
 cd EpONet/
@@ -49,7 +49,7 @@ bash ./DAVIS_Dataset/download_data.sh
 #These command will populate the `./DAVIS_Dataset/` folder.
 ```
 
-###### 5) Test EpO (Motion Network)
+##### 5) Test EpO (Motion Network)
 
 ```
 th testDAVIS_motion.lua -gpu $GPU_ID -model $MODEL_NAME
@@ -57,7 +57,7 @@ th testDAVIS_motion.lua -gpu $GPU_ID -model $MODEL_NAME
 #where GPU_ID stands for the index of GPU, and MODEL_NAME is motion model i.e. DAVISFineTuned.dat
 ```
 
-###### 6) Test EpO+ (Fusion Network)
+##### 6) Test EpO+ (Fusion Network)
 
 ```
 th testDAVIS_Fusion.lua -gpu $GPU_ID -model -memoryModel $MODEL_NAME -motionModel DAVISFineTuned.dat
@@ -65,7 +65,7 @@ th testDAVIS_Fusion.lua -gpu $GPU_ID -model -memoryModel $MODEL_NAME -motionMode
 #where GPU_ID stands for the index of GPU, and MODEL_NAME is fusion model i.e. fusionBestNet_DAVIS_2016.dat
 ```
 
-###### 7) Apply CRF 
+##### 7) Apply CRF 
 
 To run the CRF post processing step, change the path to DAVIS dataset in the 'crf_motion.py' & 'crf_fusion.py' scripts run the following commands:
 
