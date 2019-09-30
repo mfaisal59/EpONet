@@ -17,7 +17,7 @@ The other two are installed with
 	git clone https://github.com/Element-Research/rnn; cd rnn; luarocks make rocks/rnn-scm-1.rockspec
 	git clone https://github.com/viorik/extracunn.git; cd extracunn; luarocks make 
 
-You will aslo need to have a relatively recently version of MATLAB, for computation of Optical Flow and Epipolar Score. 
+You will aslo need to have a relatively recent version of MATLAB, for computation of Optical Flow and Epipolar Score. 
 
 
 ### Instructions:
@@ -38,7 +38,7 @@ git clone https://github.com/mfaisal59/EpONet.git
 ```
 cd EpONet/
 bash ./models/download_models.sh
-#These command will populate the `./models/` folder with trained models.
+#This command will populate the `./models/` folder with trained models.
 ```
 
 ##### 4) Download our pre-computed Epipolar Score, Optical Flow, motion Images and JPEGImages for two test sequences from DAVIS Dataset.
