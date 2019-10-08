@@ -77,3 +77,19 @@ python crf_fusion.py $RESULT_FOLDER $RESULT_FOLDER_CRF
 		
 ### Pre-Computed Results
 Pre-Computed results on validation set of DAVIS Dataset can be downloaded from these links [EpO](https://drive.google.com/drive/folders/1A2ewOKvLwZy0A83AZEC9XivZPNxm0PJB?usp=sharing) and [Epo+](https://drive.google.com/drive/folders/1gvMmAarNLfru7IVYkzfXuekhCMjcjYnO?usp=sharing).
+
+#### BIBTEX:
+
+```@article{DBLP:journals/corr/abs-1909-13258,
+  author    = {Muhammad Faisal and
+               Ijaz Akhter and
+               Mohsen Ali and
+               Richard I. Hartley},
+  title     = {Exploiting Geometric Constraints on Dense Trajectories for Motion
+               Saliency},
+  journal   = {CoRR},
+  volume    = {abs/1909.13258},
+  year      = {2019},
+  url       = {http://arxiv.org/abs/1909.13258}
+}
+```
