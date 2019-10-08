@@ -80,7 +80,8 @@ Pre-Computed results on validation set of DAVIS Dataset can be downloaded from t
 
 #### BIBTEX:
 
-```@article{DBLP:journals/corr/abs-1909-13258,
+```
+@article{DBLP:journals/corr/abs-1909-13258,
   author    = {Muhammad Faisal and
                Ijaz Akhter and
                Mohsen Ali and
