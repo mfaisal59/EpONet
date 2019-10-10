@@ -6,6 +6,11 @@ The existing approaches for salient motion segmentation are unable to explicitly
 
 This is a public implementation of our WACV 2020 paper on Exploiting Geometric Constraints on Dense Trajectories for Motion Saliency. This repository contains testing code and trained models. The complete source code is tested on Ubuntu 16.04 with CUDA 8.0 and MATLAB 2016b.
 
+### RBSF Dataset:
+We created our own synthetic dataset, called RBSF (Real Background, Synthetic foreground), by overlaying the 20 different foreground objects performing various movements with 5 different real background videos. We downloaded both the foregrounds and backgrounds videos from YouTube and mixed them using Video Editing Tool. The dataset can be downloaded from [RBSF](https://github.com/mfaisal59/RBSF).
+
+For more details about dataset, please visit our [project page](http://im.itu.edu.pk/video-object-segmentation/.
+
 ### Installations:
 
 Our implementation is based on the Torch framework (http://torch.ch). It depends on the lua/torch packages "nnx", "rnn" and "extracunn". The first can be installed with
