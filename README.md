@@ -42,6 +42,7 @@ git clone https://github.com/mfaisal59/EpONet.git
 
 ```
 cd EpONet/
+chmod +x download_models.sh
 bash ./models/download_models.sh
 #This command will populate the `./models/` folder with trained models.
 ```
@@ -50,6 +51,7 @@ bash ./models/download_models.sh
 
 ```
 cd EpONet/
+chmod +x download_data.sh
 bash ./DAVIS_Dataset/download_data.sh
 #These command will populate the `./DAVIS_Dataset/` folder.
 ```
